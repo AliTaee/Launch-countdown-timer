@@ -26,3 +26,22 @@ Users should be able to:
 - Flexbox
 - JavaScript
 - [Parcel](https://parceljs.org/) - Parcel is a web application bundler, differentiated by its developer experience
+- [Normalize](https://www.npmjs.com/package/normalize-scss) - Normalize.css is a customisable CSS file that makes browsers render all elements more consistently and in line with modern standards.
+
+## Running the App
+
+### Development
+
+```
+yarn dev
+or
+npm run dev
+```
+
+### Production
+
+```
+yarn build
+or
+npm run build
+```

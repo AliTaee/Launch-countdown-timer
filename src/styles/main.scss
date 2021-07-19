@@ -1,7 +1,19 @@
 @import './var';
+@import './mixins';
 
 body {
   color: $white;
   background: $dark-blue;
   font-family: 'Red Hat Text', sans-serif;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  @include flexCenter;
+  flex-direction: column;
+
+  &__title {
+    margin: 0;
+  }
 }

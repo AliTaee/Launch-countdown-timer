@@ -16,4 +16,10 @@ body {
   &__title {
     margin: 0;
   }
+
+  &__pattern-hills {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 }

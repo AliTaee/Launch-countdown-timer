@@ -1,3 +1,4 @@
+'use strict'
 require('normalize.css')
 
 // customize heading, title, social links...

@@ -1,5 +1,6 @@
 @import './var';
 @import './mixins';
+@import './animation';
 
 body {
   color: $white;
@@ -14,13 +15,16 @@ body {
   flex-direction: column;
 
   &__pattern-stars {
+    animation: twinkle 6s linear 1s infinite alternate;
     position: absolute;
-    top: 0;
+    top: 10%;
     width: 100%;
   }
 
   &__title {
     margin: 0;
+    letter-spacing: 6px;
+    text-transform: uppercase;
   }
 
   &__pattern-hills {

@@ -3,7 +3,7 @@
 
 body {
   color: $white;
-  background: $dark-blue;
+  background: $dark-blue-strong;
   font-family: 'Red Hat Text', sans-serif;
 }
 
@@ -12,6 +12,12 @@ body {
   height: 100vh;
   @include flexCenter;
   flex-direction: column;
+
+  &__pattern-stars {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
   &__title {
     margin: 0;

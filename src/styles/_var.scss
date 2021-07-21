@@ -9,10 +9,13 @@ $dark-blue-medium: hsl(235, 16%, 14%);
 $dark-blue-strong: hsl(234, 17%, 12%);
 
 // Z-index
-$level1: 10;
-$level2: 20;
-$level3: 30;
-$level4: 40;
-$level5: 50;
-$level10: 100;
-$level999: 999;
+$zIndex-level1: 10;
+$zIndex-level2: 20;
+$zIndex-level3: 30;
+$zIndex-level4: 40;
+$zIndex-level5: 50;
+$zIndex-level10: 100;
+$zIndex-level999: 999;
+
+// letter spacing
+$main-letter-spacing: 6px;

@@ -11,11 +11,11 @@ body {
 .main {
   position: relative;
   height: 100vh;
-  @include flexCenter;
+  @include flex(column, space-around, center);
   flex-direction: column;
 
   &__pattern-stars {
-    z-index: $level1;
+    z-index: $zIndex-level1;
     animation: twinkle 6s linear 1s infinite alternate;
     position: absolute;
     top: 10%;
@@ -23,22 +23,51 @@ body {
   }
 
   &__title {
-    margin: 0;
-    letter-spacing: 6px;
+    margin: 150px 0 0;
+    letter-spacing: $main-letter-spacing;
     text-transform: uppercase;
+    font-size: 24px;
   }
 
   &__pattern-hills {
-    z-index: $level2;
+    z-index: $zIndex-level2;
     position: absolute;
     bottom: 0;
     width: 100%;
   }
 
   .footer {
-    z-index: $level5;
-    position: absolute;
-    bottom: 10%;
+    z-index: $zIndex-level5;
+  }
+}
+
+.time {
+  @include flex();
+
+  &__wrapper {
+    @include flex(column);
+    margin-right: 40px;
+  }
+
+  &__wrapper:last-child {
+    margin-right: 0;
+  }
+
+  &__card {
+    @include flexCenter;
+    color: $primary-red;
+    background-color: hsl(236, 21%, 26%);
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    font-size: 80px;
+  }
+
+  &__unit {
+    color: $primary-blue;
+    letter-spacing: $main-letter-spacing;
+    margin-top: 30px;
+    text-transform: uppercase;
   }
 }
 

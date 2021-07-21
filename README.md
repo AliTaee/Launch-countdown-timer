@@ -38,6 +38,8 @@ or
 npm run dev
 ```
 
+and then open browser and navigate to `localhost:9000`
+
 ### Production
 
 ```
@@ -45,3 +47,7 @@ yarn build
 or
 npm run build
 ```
+
+### Useful resources
+
+- [How to insert svg with JavaScript](https://dev.to/tqbit/how-to-create-svg-elements-with-javascript-4mmp)

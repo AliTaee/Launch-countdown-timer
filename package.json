@@ -26,7 +26,6 @@
   },
   "assetsPath": "src/assets",
   "dependencies": {
-    "normalize-scss": "^7.0.1",
     "normalize.css": "^8.0.1"
   }
 }

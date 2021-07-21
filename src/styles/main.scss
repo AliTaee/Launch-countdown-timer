@@ -15,6 +15,7 @@ body {
   flex-direction: column;
 
   &__pattern-stars {
+    z-index: $level1;
     animation: twinkle 6s linear 1s infinite alternate;
     position: absolute;
     top: 10%;
@@ -28,8 +29,40 @@ body {
   }
 
   &__pattern-hills {
+    z-index: $level2;
     position: absolute;
     bottom: 0;
     width: 100%;
+  }
+
+  .footer {
+    z-index: $level5;
+    position: absolute;
+    bottom: 10%;
+  }
+}
+
+.socials-list {
+  @include flex();
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    margin-right: 20px;
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__link {
+    cursor: pointer;
+    padding: 5px;
+    display: block;
+
+    &:hover path {
+      fill: $primary-red;
+    }
   }
 }

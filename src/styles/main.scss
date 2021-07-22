@@ -4,7 +4,7 @@
 
 body {
   color: $white;
-  background: $dark-blue-strong;
+  background: $dark-blue-medium;
   font-family: 'Red Hat Text', sans-serif;
 }
 
@@ -56,12 +56,42 @@ body {
 
   &__card {
     @include flexCenter;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 0 0 $dark-blue-strong;
     color: $primary-red;
     background-color: $dark-blue;
     border-radius: 8px;
     width: 150px;
     height: 150px;
     font-size: 80px;
+  }
+
+  &__notch {
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    background: $dark-blue-strong;
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: ' ';
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: $dark-blue-strong;
+      border-radius: 100%;
+      top: -6px;
+    }
+
+    &::after {
+      right: -6px;
+    }
+
+    &::before {
+      left: -6px;
+    }
   }
 
   &__unit {

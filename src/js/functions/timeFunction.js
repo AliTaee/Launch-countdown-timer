@@ -72,16 +72,14 @@ export const timeFunction = (time) => {
         time.setSeconds(time.getSeconds() - 1)
 
         // Set real time counter
-        shouldUpdateTime(
-          daysElements,
-          days !== 0 && time.getDate() <= days ? time.getDate() : 0
-        )
+        // Todo fix days if it was more than 31 days!
+        shouldUpdateTime(daysElements, days !== 0 ? time.getDate() : 0)
         shouldUpdateTime(hoursElements, time.getHours())
         shouldUpdateTime(minutesElements, time.getMinutes())
         secondsElements.innerText = addZeroBeforeNumber(time.getSeconds())
       }
     }
 
-    timeInterval = setInterval(() => countDownTimer(), 1000)
+    timeInterval = setInterval(countDownTimer, 1000)
   }
 }

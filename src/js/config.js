@@ -1,10 +1,10 @@
 export const config = {
   mainTitle: "We're launching soon",
   time: {
-    days: '8',
-    hours: '23',
-    minutes: '55',
-    seconds: '41',
+    days: 8,
+    hours: 23,
+    minutes: 55,
+    seconds: 41,
   },
   socials: [
     {

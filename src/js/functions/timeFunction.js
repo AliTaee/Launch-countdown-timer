@@ -34,22 +34,25 @@ export const timeFunction = (time) => {
       let timeInterval = null
       const countDownTimer = () => {
         if (
-          time.getDate() === 0 &&
+          days === 0 &&
           time.getHours() === 0 &&
           time.getMinutes() === 0 &&
           time.getSeconds() === 0
         ) {
           // End of the time!
           clearInterval(timeInterval)
+        } else {
+          time.setSeconds(time.getSeconds() - 1)
+
+          // Set real time counter
+          shouldUpdateTime(
+            daysElements,
+            days !== 0 && time.getDate() <= days ? time.getDate() : 0
+          )
+          shouldUpdateTime(hoursElements, time.getHours())
+          shouldUpdateTime(minutesElements, time.getMinutes())
+          secondsElements.innerText = addZeroBeforeNumber(time.getSeconds())
         }
-
-        time.setSeconds(time.getSeconds() - 1)
-
-        // Set real time counter
-        shouldUpdateTime(daysElements, time.getDate())
-        shouldUpdateTime(hoursElements, time.getHours())
-        shouldUpdateTime(minutesElements, time.getMinutes())
-        secondsElements.innerText = addZeroBeforeNumber(time.getSeconds())
       }
 
       timeInterval = setInterval(() => countDownTimer(), 1000)

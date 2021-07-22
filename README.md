@@ -51,3 +51,5 @@ npm run build
 ### Useful resources
 
 - [How to insert svg with JavaScript](https://dev.to/tqbit/how-to-create-svg-elements-with-javascript-4mmp)
+- [Date in JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+- [Time tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)

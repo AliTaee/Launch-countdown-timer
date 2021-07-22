@@ -43,6 +43,7 @@ body {
 
 .time {
   @include flex();
+  z-index: $zIndex-level5;
 
   &__wrapper {
     @include flex(column);

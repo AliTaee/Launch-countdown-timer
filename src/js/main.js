@@ -9,6 +9,6 @@ import { timeFunction } from './functions/timeFunction'
 import { setPageHeading } from './functions/setPageHeading'
 import { setSocialsSection } from './functions/setSocialsSection'
 
-timeFunction()
+timeFunction(config.time)
 setPageHeading(config.mainTitle)
 setSocialsSection(config.socials)

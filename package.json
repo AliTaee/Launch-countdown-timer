@@ -12,7 +12,7 @@
     "JavaScript"
   ],
   "scripts": {
-    "dev": "parcel src/index.html --port 9000",
+    "dev": "parcel src/index.html --port 9000 --open",
     "build": "parcel build src/index.html"
   },
   "devDependencies": {

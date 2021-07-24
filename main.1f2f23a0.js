@@ -11,4 +11,3 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{}],"d6sW":[function(require,module,exports) {
 "use strict";var i=require("./config"),e=require("./functions/timeFunction"),n=require("./functions/setPageHeading"),t=require("./functions/setSocialsSection");require("normalize.css"),(0,e.timeFunction)(i.config.time),(0,n.setPageHeading)(i.config.mainTitle),(0,t.setSocialsSection)(i.config.socials);
 },{"normalize.css":"DOAq","./config":"mRRC","./functions/timeFunction":"hz2c","./functions/setPageHeading":"ZhwX","./functions/setSocialsSection":"cZur"}]},{},["d6sW"], null)
-//# sourceMappingURL=/main.b30c93b5.js.map

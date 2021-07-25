@@ -11,8 +11,7 @@ body {
 .main {
   position: relative;
   height: 100vh;
-  @include flex(column, space-around, center);
-  flex-direction: column;
+  @include flex(column, space-between, center);
 
   &__pattern-stars {
     z-index: $zIndex-level1;
@@ -29,15 +28,15 @@ body {
     font-size: 24px;
   }
 
-  &__pattern-hills {
-    z-index: $zIndex-level2;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-  }
-
   .footer {
+    width: 100%;
+    height: 25%;
+    @include flexCenter;
     z-index: $zIndex-level5;
+    background-image: url('../assets/images/pattern-hills.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
   }
 }
 

@@ -1,6 +1,5 @@
 @import './var';
 @import './mixins';
-@import './animation';
 
 body {
   color: $white;
@@ -12,14 +11,7 @@ body {
   position: relative;
   height: 100vh;
   @include flex(column, space-between, center);
-
-  &__pattern-stars {
-    z-index: $zIndex-level1;
-    animation: twinkle 6s linear 1s infinite alternate;
-    position: absolute;
-    top: 10%;
-    width: 100%;
-  }
+  @include backgroundImage('../assets/images/bg-stars.svg');
 
   &__title {
     margin: 150px 0 0;
@@ -33,10 +25,12 @@ body {
     height: 25%;
     @include flexCenter;
     z-index: $zIndex-level5;
-    background-image: url('../assets/images/pattern-hills.svg');
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+    @include backgroundImage(
+      '../assets/images/pattern-hills.svg',
+      no-repeat,
+      top,
+      cover
+    );
   }
 }
 

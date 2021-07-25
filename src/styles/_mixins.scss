@@ -10,3 +10,15 @@
   justify-content: $justifyContent;
   align-items: $alignItems;
 }
+
+@mixin backgroundImage(
+  $src,
+  $repeat: no-repeat,
+  $position: center,
+  $size: cover
+) {
+  background-image: url($src);
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}

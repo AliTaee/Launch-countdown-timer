@@ -63,8 +63,15 @@ export const timeFunction = (time) => {
   const hoursElements = document.getElementById('time-hours')
   const minutesElements = document.getElementById('time-minutes')
   const secondsElements = document.getElementById('time-seconds')
+  const timeWrapper = document.getElementById('time')
 
-  if (daysElements && hoursElements && minutesElements && secondsElements) {
+  if (
+    timeWrapper &&
+    daysElements &&
+    hoursElements &&
+    minutesElements &&
+    secondsElements
+  ) {
     // Set init time to document
     daysElements.innerText = addZeroBeforeNumber(days)
     hoursElements.innerText = addZeroBeforeNumber(hours)
@@ -87,6 +94,11 @@ export const timeFunction = (time) => {
       } else {
         totalSeconds -= 1
         time = convertSecToTimeUnits(totalSeconds)
+
+        timeWrapper.setAttribute(
+          'aria-label',
+          `${time.days} days, ${time.hours} hours, ${time.minutes} minutes, ${time.seconds} seconds`
+        )
 
         // Set real time counter
         shouldUpdateTime(daysElements, time.days)
